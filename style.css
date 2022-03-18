@@ -1,0 +1,1562 @@
+                                    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=DM+Sans&display=swap');
+                                     :root {
+                                        --gradient: linear-gradient(90deg, #f3c612, #f39c12);
+                                    }
+                                    
+                                    * {
+                                        font-family: 'DM Sans', sans-serif;
+                                        margin: 0;
+                                        padding: 0;
+                                        box-sizing: border-box;
+                                        border: none;
+                                        outline: none;
+                                        text-decoration: none;
+                                        text-transform: capitalize;
+                                        transition: all .2s linear;
+                                    }
+                                    
+                                    *::selection {
+                                        background: #800000;
+                                        color: #fff;
+                                    }
+                                    
+                                    html {
+                                        font-size: 62.5%;
+                                        overflow-x: hidden;
+                                    }
+                                    
+                                    html::-webkit-scrollbar {
+                                        width: 1.5rem;
+                                    }
+                                    
+                                    html::-webkit-scrollbar-track {
+                                        background: #333;
+                                    }
+                                    
+                                    html::-webkit-scrollbar-thumb {
+                                        background: linear-gradient(#f1c40f, #f39c12);
+                                    }
+                                    
+                                    h3,
+                                    h1 {
+                                        font-family: 'Cormorant Garamond', serif;
+                                        font-style: italic;
+                                        font-weight: 400;
+                                        line-height: 1.2;
+                                    }
+                                    
+                                    section {
+                                        min-height: 100vh;
+                                        padding: 1rem 7%;
+                                        padding-top: 6rem;
+                                    }
+                                    
+                                    .btn {
+                                        padding: .7rem 3rem;
+                                        font-size: 2rem;
+                                        color: #fff;
+                                        background: var(--gradient);
+                                        border-radius: 5rem;
+                                        margin-top: 1rem;
+                                        cursor: pointer;
+                                        box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+                                        position: relative;
+                                        overflow: hidden;
+                                        z-index: 0;
+                                    }
+                                    
+                                    .btn::before {
+                                        position: absolute;
+                                        top: -1rem;
+                                        left: -100%;
+                                        background: #fff9;
+                                        height: 150%;
+                                        width: 20%;
+                                        transform: rotate(25deg);
+                                        z-index: -1;
+                                    }
+                                    
+                                    .btn:hover::before {
+                                        transition: .3s linear;
+                                        left: 120%;
+                                    }
+                                    
+                                    .heading {
+                                        color: #444;
+                                        padding: 1rem;
+                                        font-size: 4rem;
+                                        text-align: center;
+                                    }
+                                    
+                                    header {
+                                        width: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        position: fixed;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 1000;
+                                        padding: 0 7%;
+                                        background: var(--gradient);
+                                        box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+                                    }
+                                    
+                                    header img {
+                                        margin: 0;
+                                        width: 300px;
+                                        height: 75px;
+                                    }
+                                    
+                                    header .navbar ul {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        list-style: none;
+                                    }
+                                    
+                                    header .navbar ul li {
+                                        margin: 0 1rem;
+                                    }
+                                    
+                                    header .navbar ul li a {
+                                        font-size: 2rem;
+                                        color: #fff;
+                                    }
+                                    
+                                    header .navbar ul li a.active,
+                                    header .navbar ul li a:hover {
+                                        color: #444;
+                                    }
+                                    
+                                    header #menu {
+                                        font-size: 3rem;
+                                        color: #fff;
+                                        cursor: pointer;
+                                        display: none;
+                                    }
+                                    
+                                    .home {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        position: relative;
+                                        text-align: center
+                                    }
+                                    
+                                    .getstarted {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(4\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
+                                    
+                                    .getstarted .box-container {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                        width: 10rem;
+                                    }
+                                    
+                                    .practiceproblems {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(4\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
+                                    
+                                    input[type="text"] {
+                                        padding: 1em;
+                                    }
+                                    
+                                    @keyframes animate {
+                                        0% {
+                                            background-position-x: 0rem;
+                                        }
+                                        100% {
+                                            background-position-x: 100rem;
+                                        }
+                                    }
+                                    
+                                    .about {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .about .image {
+                                        flex: 1 1 40rem;
+                                    }
+                                    
+                                    .about .image img {
+                                        height: 500px;
+                                        width: 500px;
+                                    }
+                                    
+                                    .about .content {
+                                        flex: 1 1 40rem;
+                                    }
+                                    
+                                    .about .content h3 {
+                                        font-size: 4rem;
+                                        color: maroon;
+                                        font-style: bold;
+                                    }
+                                    
+                                    .about .content p {
+                                        font-size: 2rem;
+                                        color: black;
+                                        padding: 1rem 0;
+                                        text-transform: none;
+                                        text-align: justify;
+                                        line-height: 18pt;
+                                    }
+                                    
+                                    .contact {
+                                        background: maroon;
+                                    }
+                                    
+                                    .contact .heading {
+                                        color: #fff;
+                                    }
+                                    
+                                    .contact .row {
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .contact .row form {
+                                        flex: 1 1 50rem;
+                                        background: white;
+                                        padding: 2rem;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        flex-wrap: wrap;
+                                        margin-top: 3rem;
+                                        align-items: flex-start;
+                                        border-radius: 25px;
+                                    }
+                                    
+                                    .contact .row form .box {
+                                        height: 5rem;
+                                        width: 49%;
+                                        border: .1rem solid #800000;
+                                        padding: 0 1rem;
+                                        margin: 1rem 0;
+                                        font-size: 1.7rem;
+                                        color: black;
+                                        background: none;
+                                        text-transform: none;
+                                        border-radius: 25px;
+                                    }
+                                    
+                                    .contact .row form .box:focus {
+                                        border-color: #800000;
+                                    }
+                                    
+                                    .contact .row form .box::placeholder {
+                                        text-transform: none;
+                                    }
+                                    
+                                    .contact .row form .address {
+                                        height: 5rem;
+                                        padding: 1rem;
+                                        resize: none;
+                                        width: 100%;
+                                        border-radius: 25px;
+                                    }
+                                    
+                                    .contact .row form .btn {
+                                        background: gold;
+                                        text-align: center;
+                                        margin: auto;
+                                        display: flex;
+                                    }
+                                    
+                                    .contact .row form .btn:hover {
+                                        background: maroon;
+                                        color: white;
+                                    }
+                                    
+                                    .contact .row .image img {
+                                        height: 350px;
+                                        margin-top: 2rem;
+                                    }
+                                    
+                                    .footer {
+                                        background: #333;
+                                        padding: 1em;
+                                    }
+                                    
+                                    .footer .box-container {
+                                        display: flex;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .footer .box-container p {
+                                        font-size: 1.7rem;
+                                        color: #eee;
+                                        padding: .7rem 1.5em;
+                                    }
+                                    
+                                    .footer .box-container p i {
+                                        padding-right: .5rem;
+                                        color: #f39c12;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .footer .box-container a {
+                                        font-size: 1.8rem;
+                                        display: block;
+                                        padding: .5rem 0;
+                                        color: #eee;
+                                    }
+                                    /* media queries  */
+                                    
+                                    @media (max-width:768px) {
+                                        html {
+                                            font-size: 55%;
+                                        }
+                                        header #menu {
+                                            display: block;
+                                        }
+                                        header .navbar {
+                                            position: fixed;
+                                            top: -120%;
+                                            left: 0;
+                                            width: 100%;
+                                            background: #444;
+                                        }
+                                        header .navbar ul {
+                                            flex-flow: column;
+                                            padding: 2rem 0;
+                                        }
+                                        header .navbar ul li {
+                                            margin: 1.5rem 0;
+                                            text-align: center;
+                                            width: 100%;
+                                        }
+                                        header .navbar ul li a {
+                                            font-size: 2.5rem;
+                                            display: block;
+                                        }
+                                        header .navbar ul li a.active,
+                                        header .navbar ul li a:hover {
+                                            color: #f39c12;
+                                        }
+                                        .fa-times {
+                                            transform: rotate(180deg);
+                                        }
+                                        header .navbar.nav-toggle {
+                                            top: 6.4rem;
+                                        }
+                                        .home h1 {
+                                            font-size: 4rem;
+                                        }
+                                        .home p {
+                                            width: auto;
+                                        }
+                                        .teacher p {
+                                            width: auto;
+                                        }
+                                        .contact .row .image {
+                                            display: none;
+                                        }
+                                    }
+                                    
+                                    @media (max-width:500px) {
+                                        html {
+                                            font-size: 50%;
+                                        }
+                                        .contact .row form .box {
+                                            width: 100%;
+                                        }
+                                    }
+                                    
+                                    .logo {
+                                        text-align: justify;
+                                    }
+                                    
+                                    .resources {
+                                        margin-top: 5rem;
+                                    }
+                                    
+                                    .resources .box-container {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .resources .box-container .box {
+                                        width: 35rem;
+                                        border: .1rem solid maroon;
+                                        position: relative;
+                                        margin: 1.5rem;
+                                    }
+                                    
+                                    .resources .box-container .box img {
+                                        height: 20rem;
+                                        width: 100%;
+                                        object-fit: initial;
+                                        background: white;
+                                    }
+                                    
+                                    .resources .box-container .box .content {
+                                        padding: 1rem;
+                                    }
+                                    
+                                    .resources .box-container .box .content .stars i {
+                                        color: #f39c12;
+                                        font-size: 1.7rem;
+                                        padding: 1rem .1rem;
+                                    }
+                                    
+                                    .resources .box-container .box .content .title {
+                                        color: black;
+                                        font-size: 2.1rem;
+                                    }
+                                    
+                                    .resources .box-container .box .content .title:hover {
+                                        text-decoration: underline maroon;
+                                    }
+                                    
+                                    .resources .box-container .box .content p {
+                                        padding: 1rem 0;
+                                        color: maroon;
+                                        font-size: 1.5rem;
+                                    }
+                                    
+                                    .resources .box-container .box .content .info {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        padding-top: .5rem;
+                                        border-top: .1rem solid rgba(0, 0, 0, .3);
+                                    }
+                                    
+                                    .resources .box-container .box .content .info h3 {
+                                        font-size: 1.5rem;
+                                        padding: 1rem;
+                                        color: maroon;
+                                    }
+                                    
+                                    .resources .box-container .box .content .info h3 i {
+                                        color: #f39c12;
+                                    }
+                                    
+                                    .sampleproblems .maincontainer {
+                                        position: relative;
+                                        width: 250px;
+                                        height: 320px;
+                                    }
+                                    
+                                    .videotutorials .thecontainer {
+                                        position: relative;
+                                        width: 250px;
+                                        height: 320px;
+                                    }
+                                    
+                                    .firstunit1 {
+                                        margin-top: 50px;
+                                    }
+                                    
+                                    .firstunit1 h1 {
+                                        text-align: center;
+                                        font-size: 3rem;
+                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                    }
+                                    
+                                    .firstunit1 .btn {
+                                        text-align: center;
+                                    }
+                                    
+                                    .firstunit1 p {
+                                        font-size: 2rem;
+                                        font-style: italic;
+                                    }
+                                    
+                                    .firstunit1 iframe {
+                                        display: block;
+                                        margin: auto;
+                                    }
+                                    
+                                    .firstunit2 h1 {
+                                        text-align: center;
+                                        font-size: 3rem;
+                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                    }
+                                    
+                                    .firstunit2 p {
+                                        font-size: 2rem;
+                                        font-style: italic;
+                                    }
+                                    
+                                    .firstunit2 iframe {
+                                        display: block;
+                                        margin: auto;
+                                    }
+                                    
+                                    .secondunit1 h1 {
+                                        text-align: center;
+                                        font-size: 3rem;
+                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                    }
+                                    
+                                    .secondunit1 p {
+                                        font-size: 2rem;
+                                        font-style: italic;
+                                    }
+                                    
+                                    .secondunit1 iframe {
+                                        display: block;
+                                        margin: auto;
+                                    }
+                                    
+                                    .secondunit2 h1 {
+                                        text-align: center;
+                                        font-size: 3rem;
+                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                    }
+                                    
+                                    .secondunit2 p {
+                                        font-size: 2rem;
+                                        font-style: italic;
+                                    }
+                                    
+                                    .secondunit2 iframe {
+                                        display: block;
+                                        margin: auto;
+                                    }
+                                    
+                                    .contbox {
+                                        width: 75rem;
+                                        border: .3rem solid maroon;
+                                        position: relative;
+                                        margin: 50px;
+                                        flex: 1 1 50rem;
+                                        color: black;
+                                        line-height: 0.5cm;
+                                        font-size: 1.5rem;
+                                        padding: 3rem;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        flex-wrap: wrap;
+                                        align-items: flex-start;
+                                        border-radius: 10px;
+                                    }
+                                    
+                                    .contbox ul li {
+                                        text-align: justify;
+                                        text-transform: none;
+                                        line-height: 0.5cm;
+                                    }
+                                    
+                                    .firstunit1 {
+                                        background: url(TRY\(6\).png);
+                                        background-size: contain;
+                                        background-position: center;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .firstunit1 .btn {
+                                        transition: 0.4s ease;
+                                    }
+                                    
+                                    .firstunit1 .btn:hover {
+                                        background: maroon;
+                                        color: #fff;
+                                    }
+                                    
+                                    .firstunit2 {
+                                        background: url(TRY\(6\).png);
+                                        background-size: contain;
+                                        background-position: center;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .firstunit2 .btn {
+                                        transition: 0.4s ease;
+                                    }
+                                    
+                                    .firstunit2 .btn:hover {
+                                        background: maroon;
+                                        color: #fff;
+                                    }
+                                    
+                                    .secondunit1 {
+                                        background: url(TRY\(6\).png);
+                                        background-size: contain;
+                                        background-position: center;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .secondunit1 .btn {
+                                        transition: 0.4s ease;
+                                    }
+                                    
+                                    .secondunit1 .btn:hover {
+                                        background: maroon;
+                                        color: #fff;
+                                    }
+                                    
+                                    .secondunit2 {
+                                        background: url(TRY\(6\).png);
+                                        background-size: contain;
+                                        background-position: center;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .secondunit2 .btn {
+                                        transition: 0.4s ease;
+                                    }
+                                    
+                                    .secondunit2 .btn:hover {
+                                        background: maroon;
+                                        color: #fff;
+                                    }
+                                    
+                                    .btn2 {
+                                        padding: .7rem 5rem;
+                                        font-size: 3rem;
+                                        color: #fff;
+                                        background: var(--gradient);
+                                        border-radius: 5rem;
+                                        margin-top: 1rem;
+                                        cursor: pointer;
+                                        box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+                                        position: relative;
+                                        overflow: hidden;
+                                        z-index: 0;
+                                    }
+                                    
+                                    .sampleproblems {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(6\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
+                                    
+                                    .sampleproblems .less {
+                                        text-align: center;
+                                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                        font-size: 2.5rem;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .acontent {
+                                        width: 75rem;
+                                        border: .3rem solid maroon;
+                                        position: relative;
+                                        flex: 1 1 50rem;
+                                        color: black;
+                                        line-height: 0.5cm;
+                                        font-size: 1.5rem;
+                                        padding: 3rem;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        flex-wrap: wrap;
+                                        align-items: flex-start;
+                                        border-radius: 10px;
+                                    }
+                                    
+                                    .acontent ol li {
+                                        text-align: justify;
+                                        text-transform: none;
+                                        font-family: 'Times New Roman', Times, serif;
+                                        line-height: 0.3in;
+                                        line-break: 0.3in;
+                                    }
+                                    
+                                    .acontent ol li p {
+                                        text-transform: none;
+                                        font-family: 'Times New Roman', Times, serif;
+                                        line-height: 0.3in;
+                                        line-break: 0.3in;
+                                    }
+                                    
+                                    .acontent ol li p ul {
+                                        text-transform: none;
+                                        font-family: 'Times New Roman', Times, serif;
+                                        line-height: 0.3in;
+                                        line-break: 0.3in;
+                                    }
+                                    
+                                    .thehead {
+                                        margin-top: 5rem;
+                                    }
+                                    
+                                    .thehead .themain {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .thehead .themain .box {
+                                        width: 35rem;
+                                        border: 1.5rem solid maroon;
+                                        border-radius: 10px;
+                                        position: relative;
+                                        margin: 1.5rem;
+                                        background: white;
+                                    }
+                                    
+                                    .thehead .themain .box .content {
+                                        padding: 2rem;
+                                    }
+                                    
+                                    .thehead .themain .box h1 {
+                                        text-align: center;
+                                        font-weight: bold;
+                                        font-size: 30px;
+                                        font-family: cursive;
+                                        color: maroon;
+                                    }
+                                    
+                                    .thehead .themain .box .content .title {
+                                        color: black;
+                                        font-size: 2.1rem;
+                                        text-align: center;
+                                        font-weight: bold;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .thehead .themain .box .content .title:hover {
+                                        text-decoration: underline maroon;
+                                    }
+                                    
+                                    .thehead .themain .box .content p {
+                                        padding: 0.1rem 0;
+                                        color: maroon;
+                                        font-size: 1.5rem;
+                                    }
+                                    
+                                    .thehead .themain .box .content .info {
+                                        display: flex;
+                                        text-align: center;
+                                        padding-top: .5rem;
+                                        border-top: .1rem solid maroon;
+                                    }
+                                    
+                                    .thehead .themain .box .content .info h3 {
+                                        font-size: 1.5rem;
+                                        padding: 1rem;
+                                        color: maroon;
+                                    }
+                                    
+                                    .thehead .themain .box .content .info h3 i {
+                                        color: #f39c12;
+                                    }
+                                    
+                                    .dropbtn {
+                                        padding: .7rem 3rem;
+                                        font-size: 2rem;
+                                        color: #fff;
+                                        background: var(--gradient);
+                                        border-radius: 5rem;
+                                        margin-top: 1rem;
+                                        cursor: pointer;
+                                        box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+                                        position: relative;
+                                        overflow: hidden;
+                                        z-index: 0;
+                                    }
+                                    
+                                    .dropdown {
+                                        position: relative;
+                                        display: inline-block;
+                                    }
+                                    
+                                    .dropdown-content h1 {
+                                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                        text-decoration: none;
+                                    }
+                                    
+                                    .dropdown-content p {
+                                        font-family: 'Times New Roman', Times, serif;
+                                        color: black;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .dropdown-content h6 {
+                                        font-size: 1.5rem;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .dropdown-content h6:hover {
+                                        background: red;
+                                    }
+                                    
+                                    .dropdown-content h5 {
+                                        font-size: 1.5rem;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .dropdown-content h5:hover {
+                                        background: lime;
+                                    }
+                                    
+                                    .dropdown-content {
+                                        display: none;
+                                        position: absolute;
+                                        background-color: #f1f1f1;
+                                        min-width: 160px;
+                                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                        z-index: 1;
+                                    }
+                                    
+                                    .dropdown-content a:hover {
+                                        background-color: #ddd;
+                                    }
+                                    
+                                    .dropdown:hover .dropdown-content {
+                                        display: block;
+                                    }
+                                    
+                                    .thehead {
+                                        background: url(TRY\(7\).png);
+                                    }
+                                    
+                                    .thehead .book {
+                                        font-size: 7rem;
+                                        color: #fff;
+                                        font-family: 'Times New Roman', Times, serif;
+                                        text-align: center;
+                                        padding: 0%;
+                                        background: maroon;
+                                        border-radius: 30px;
+                                    }
+                                    
+                                    .theheads {
+                                        background: url(TRY\(7\).png);
+                                    }
+                                    
+                                    .theheads .book {
+                                        font-size: 7rem;
+                                        color: #fff;
+                                        font-family: 'Times New Roman', Times, serif;
+                                        text-align: center;
+                                        padding: 0%;
+                                        background: maroon;
+                                        border-radius: 30px;
+                                    }
+                                    
+                                    .theheads {
+                                        margin-top: 5rem;
+                                    }
+                                    
+                                    .theheads .themain {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    
+                                    .theheads .themain .box {
+                                        width: 35rem;
+                                        border: 1.5rem solid maroon;
+                                        border-radius: 10px;
+                                        position: relative;
+                                        margin: 1.5rem;
+                                        background: white;
+                                    }
+                                    
+                                    .theheads .themain .box .content {
+                                        padding: 2rem;
+                                    }
+                                    
+                                    .theheads .themain .box h1 {
+                                        text-align: center;
+                                        font-weight: bold;
+                                        font-size: 30px;
+                                        font-family: cursive;
+                                        color: maroon;
+                                    }
+                                    
+                                    .theheads .themain .box .content .title {
+                                        color: black;
+                                        font-size: 2.1rem;
+                                        text-align: center;
+                                        font-weight: bold;
+                                        text-transform: none;
+                                    }
+                                    
+                                    .theheads .themain .box .content .title:hover {
+                                        text-decoration: underline maroon;
+                                    }
+                                    
+                                    .theheads .themain .box .content p {
+                                        padding: 0.1rem 0;
+                                        color: maroon;
+                                        font-size: 1.5rem;
+                                    }
+                                    
+                                    .theheads .themain .box .content .info {
+                                        display: flex;
+                                        text-align: center;
+                                        padding-top: .5rem;
+                                        border-top: .1rem solid maroon;
+                                    }
+                                    
+                                    .theheads .themain .box .content .info h3 {
+                                        font-size: 1.5rem;
+                                        padding: 1rem;
+                                        color: maroon;
+                                    }
+                                    
+                                    .theheads .themain .box .content .info h3 i {
+                                        color: #f39c12;
+                                    }
+                                    
+                                    .videotutorials {
+                                        height: 400px;
+                                        margin: 0;
+                                        display: grid;
+                                        grid-template-rows: 300px 100px;
+                                        grid-template-columns: 0.5fr 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 0.5fr;
+                                        align-items: center;
+                                        justify-items: center;
+                                    }
+                                    
+                                    main#carousel {
+                                        grid-row: 1 / 2;
+                                        grid-column: 1 / 17;
+                                        width: 100vw;
+                                        height: 400px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        overflow: hidden;
+                                        transform-style: preserve-3d;
+                                        perspective: 400px;
+                                        --items: 15;
+                                        --middle: 8;
+                                        --position: 1;
+                                        pointer-events: none;
+                                        padding: 10px;
+                                    }
+                                    
+                                    div.item {
+                                        position: absolute;
+                                        width: 300px;
+                                        height: 400px;
+                                        background-color: coral;
+                                        --r: calc(var(--position) - var(--offset));
+                                        --abs: max(calc(var(--r) * -1), var(--r));
+                                        transition: all 0.25s linear;
+                                        transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+                                        z-index: calc((var(--position) - var(--abs)));
+                                        border: 40px;
+                                        border-radius: 10px;
+                                    }
+                                    
+                                    div.item h1 {
+                                        text-align: left;
+                                        font-size: 2rem;
+                                        font-style: italic;
+                                        font-family: 'Courier New', Courier, monospace;
+                                        text-transform: none;
+                                        border: 40px;
+                                    }
+                                    
+                                    div.item h2 {
+                                        text-align: center;
+                                        font-size: 4rem;
+                                    }
+                                    
+                                    div.item .btn {
+                                        text-align: center;
+                                    }
+                                    
+                                    div.item:nth-of-type(1) {
+                                        --offset: 1;
+                                        background-color: whitesmoke;
+                                    }
+                                    
+                                    div.item:nth-of-type(2) {
+                                        --offset: 2;
+                                        background-color: maroon;
+                                    }
+                                    
+                                    div.item:nth-of-type(3) {
+                                        --offset: 3;
+                                        background-color: whitesmoke;
+                                    }
+                                    
+                                    div.item:nth-of-type(4) {
+                                        --offset: 4;
+                                        background-color: maroon;
+                                    }
+                                    
+                                    div.item:nth-of-type(5) {
+                                        --offset: 5;
+                                        background-color: whitesmoke;
+                                    }
+                                    
+                                    div.item:nth-of-type(6) {
+                                        --offset: 6;
+                                        background-color: maroon;
+                                    }
+                                    
+                                    div.item:nth-of-type(7) {
+                                        --offset: 7;
+                                        background-color: whitesmoke;
+                                    }
+                                    
+                                    div.item:nth-of-type(8) {
+                                        --offset: 8;
+                                        background-color: maroon;
+                                    }
+                                    
+                                    div.item:nth-of-type(9) {
+                                        --offset: 9;
+                                        background-color: whitesmoke;
+                                    }
+                                    
+                                    div.item:nth-of-type(10) {
+                                        --offset: 10;
+                                        background-color: maroon;
+                                    }
+                                    
+                                    div.item:nth-of-type(11) {
+                                        --offset: 11;
+                                        background-color: whitesmoke;
+                                    }
+                                    
+                                    div.item:nth-of-type(12) {
+                                        --offset: 12;
+                                        background-color: maroon;
+                                    }
+                                    
+                                    div.item:nth-of-type(13) {
+                                        --offset: 13;
+                                        background-color: whitesmoke;
+                                    }
+                                    
+                                    div.item:nth-of-type(14) {
+                                        --offset: 14;
+                                        background-color: maroon;
+                                    }
+                                    
+                                    div.item:nth-of-type(15) {
+                                        --offset: 15;
+                                        background-color: whitesmoke;
+                                    }
+                                    
+                                    input:nth-of-type(1) {
+                                        grid-column: 2 / 3;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(1):checked~main#carousel {
+                                        --position: 1;
+                                    }
+                                    
+                                    input:nth-of-type(2) {
+                                        grid-column: 3 / 4;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(2):checked~main#carousel {
+                                        --position: 2;
+                                    }
+                                    
+                                    input:nth-of-type(3) {
+                                        grid-column: 4 /5;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(3):checked~main#carousel {
+                                        --position: 3;
+                                    }
+                                    
+                                    input:nth-of-type(4) {
+                                        grid-column: 5 / 6;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(4):checked~main#carousel {
+                                        --position: 4;
+                                    }
+                                    
+                                    input:nth-of-type(5) {
+                                        grid-column: 6 / 7;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(5):checked~main#carousel {
+                                        --position: 5;
+                                    }
+                                    
+                                    input:nth-of-type(6) {
+                                        grid-column: 7 / 8;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(6):checked~main#carousel {
+                                        --position: 6;
+                                    }
+                                    
+                                    input:nth-of-type(7) {
+                                        grid-column: 8 / 9;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(7):checked~main#carousel {
+                                        --position: 7;
+                                    }
+                                    
+                                    input:nth-of-type(8) {
+                                        grid-column: 9 / 10;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(8):checked~main#carousel {
+                                        --position: 8;
+                                    }
+                                    
+                                    input:nth-of-type(9) {
+                                        grid-column: 10 / 11;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(9):checked~main#carousel {
+                                        --position: 9;
+                                    }
+                                    
+                                    input:nth-of-type(10) {
+                                        grid-column: 11 / 12;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(10):checked~main#carousel {
+                                        --position: 10;
+                                    }
+                                    
+                                    input:nth-of-type(11) {
+                                        grid-column: 12 / 13;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(11):checked~main#carousel {
+                                        --position: 11;
+                                    }
+                                    
+                                    input:nth-of-type(12) {
+                                        grid-column: 13 / 14;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(12):checked~main#carousel {
+                                        --position: 12;
+                                    }
+                                    
+                                    input:nth-of-type(13) {
+                                        grid-column: 14 / 15;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(13):checked~main#carousel {
+                                        --position: 13;
+                                    }
+                                    
+                                    input:nth-of-type(14) {
+                                        grid-column: 15 / 16;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(14):checked~main#carousel {
+                                        --position: 14;
+                                    }
+                                    
+                                    input:nth-of-type(15) {
+                                        grid-column: 16 / 17;
+                                        grid-row: 2 / 3;
+                                    }
+                                    
+                                    input:nth-of-type(15):checked~main#carousel {
+                                        --position: 15;
+                                    }
+                                    
+                                    .resources h3 {
+                                        font-family: 'Times New Roman', Times, serif;
+                                        text-transform: none;
+                                        text-align: justify;
+                                    }
+                                    
+                                    .vidfirst {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(4\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
+                                    
+                                    .vidfirst .thecontainer {
+                                        display: inline-block;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent {
+                                        position: relative;
+                                        width: 375px;
+                                        height: 450px;
+                                        background: wheat;
+                                        border-radius: 25px;
+                                        overflow: hidden;
+                                        text-align: center;
+                                        display: inline-block
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent a {
+                                        text-decoration: none;
+                                        color: black;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent2 {
+                                        position: relative;
+                                        width: 375px;
+                                        height: 500px;
+                                        background: wheat;
+                                        border-radius: 25px;
+                                        overflow: hidden;
+                                        text-align: center;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent2 a {
+                                        text-decoration: none;
+                                        color: black;
+                                    }
+                                    
+                                    .vidfirst .direction h1 {
+                                        margin: 0;
+                                        background: maroon;
+                                        color: white;
+                                        text-align: center;
+                                        text-transform: none;
+                                        font-family: 'Times New Roman', Times, serif;
+                                        font-size: 2.5rem;
+                                        border-radius: 3px;
+                                        padding-left: 50px;
+                                        padding-right: 50px;
+                                        padding-top: 10px;
+                                        padding-bottom: 10px;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent h1 {
+                                        font-size: 2rem;
+                                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent li {
+                                        font-size: 1.5rem;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent h3 {
+                                        font-weight: lighter;
+                                        font-size: 2rem;
+                                        font-family: 'Courier New', Courier, monospace;
+                                        color: maroon;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent2 h3 {
+                                        font-weight: lighter;
+                                        font-size: 2rem;
+                                        font-family: 'Courier New', Courier, monospace;
+                                        color: maroon;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent2 h1 {
+                                        font-size: 2rem;
+                                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent2 li {
+                                        font-size: 1.5rem;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent a:hover {
+                                        font-size: 150%;
+                                        font-weight: bolder;
+                                        color: #800000;
+                                    }
+                                    
+                                    .vidfirst .thecontainer .thecontent2 a:hover {
+                                        font-size: 150%;
+                                        font-weight: bolder;
+                                        color: #800000;
+                                    }
+                                    
+                                    .practiceproblems .dropdown-content {
+                                        display: none;
+                                        position: absolute;
+                                        background-color: #f9f9f9;
+                                        min-width: 160px;
+                                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                        z-index: 1;
+                                    }
+                                    
+                                    .practiceproblems .dropdown-content a {
+                                        float: none;
+                                        color: black;
+                                        padding: 12px 16px;
+                                        text-decoration: none;
+                                        display: block;
+                                        text-align: left;
+                                    }
+                                    
+                                    .practiceproblems .dropdown-content a:hover {
+                                        background-color: #ddd;
+                                    }
+                                    
+                                    .practiceproblems .dropdown:hover .dropdown-content {
+                                        display: block;
+                                    }
+                                    
+                                    .getstarted .dropdown-content {
+                                        display: none;
+                                        position: absolute;
+                                        background-color: #f9f9f9;
+                                        min-width: 160px;
+                                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                        z-index: 1;
+                                    }
+                                    
+                                    .getstarted .dropdown-content a {
+                                        float: none;
+                                        color: black;
+                                        padding: 12px 16px;
+                                        text-decoration: none;
+                                        display: block;
+                                        text-align: left;
+                                    }
+                                    
+                                    .getstarted .dropdown-content a:hover {
+                                        background-color: #ddd;
+                                    }
+                                    
+                                    .getstarted .dropdown:hover .dropdown-content {
+                                        display: block;
+                                    }
+                                    
+                                    .getstarted .dropright-content {
+                                        display: none;
+                                        background-color: #f9f9f9;
+                                        min-width: 160px;
+                                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                        z-index: 1;
+                                    }
+                                    
+                                    .getstarted .dropright-content a {
+                                        float: none;
+                                        color: black;
+                                        padding: 12px 16px;
+                                        text-decoration: none;
+                                        display: block;
+                                        text-align: left;
+                                    }
+                                    
+                                    .getstarted .dropright-content a:hover {
+                                        background-color: #ddd;
+                                    }
+                                    
+                                    .getstarted .dropright:hover .dropright-content {
+                                        display: block;
+                                    }
+                                    
+                                    .contbox li a {
+                                        text-transform: none;
+                                    }
+                                    
+                                    .yourcontainer {
+                                        display: flex;
+                                    }
+                                    
+                                    .yourcontainer .btn {
+                                        border-radius: 5px;
+                                        margin: 3rem;
+                                    }
+                                    
+                                    .yourcontainer .dropdown .dropbtn {
+                                        border-radius: 5px;
+                                        margin: 3rem;
+                                    }
+                                    
+                                    .dropdown-content {
+                                        padding: 2rem;
+                                        font-size: 1.5rem;
+                                    }
+                                    
+                                    .dropdown-content h1 {
+                                        font-size: 1.9rem;
+                                        text-align: center;
+                                    }
+                                    
+                                    .dropdown {
+                                        position: relative;
+                                    }
+                                    
+                                    .primary .dropdown-content {
+                                        display: none;
+                                        position: absolute;
+                                        background-color: #f9f9f9;
+                                        min-width: 160px;
+                                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                        z-index: 1;
+                                    }
+                                    
+                                    .primary .dropdown-content a {
+                                        float: none;
+                                        color: black;
+                                        padding: 12px 16px;
+                                        text-decoration: none;
+                                        display: block;
+                                        text-align: left;
+                                    }
+                                    
+                                    .primary .dropdown-content a:hover {
+                                        background-color: #ddd;
+                                    }
+                                    
+                                    .primary .dropdown:hover .dropdown-content {
+                                        display: block;
+                                    }
+                                    
+                                    .primary .dropdown .dropbtn {
+                                        border-radius: 5px;
+                                        margin: 3rem;
+                                    }
+                                    
+                                    .primary .dropdown-content {
+                                        text-decoration: none;
+                                    }
+                                    
+                                    .primary {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(4\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
+                                    
+                                    .firstunit1 {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(6\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
+                                    
+                                    .firstunit2 {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(6\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
+                                    
+                                    .secondunit1 {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(6\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
+                                    
+                                    .secondunit2 {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        flex-flow: column;
+                                        background: url(TRY\(6\).png);
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: center;
+                                        background-attachment: fixed;
+                                        position: relative;
+                                        text-align: center;
+                                        text-emphasis: none;
+                                        text-decoration: none;
+                                        margin: auto;
+                                    }
