@@ -1560,3 +1560,8 @@
                                         text-decoration: none;
                                         margin: auto;
                                     }
+
+                                    .home .btn:hover {
+                                        background: maroon;
+                                        color: white;
+                                    }
