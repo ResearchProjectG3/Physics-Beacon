@@ -32,7 +32,56 @@
                 <li><a href="#about">about</a></li>
                 <li><a href="#resources">Other Resources</a></li>
                 <li><a href="#contact">contact</a></li>
-                <li><input type="text" placeholder="Search.."></li>
+                <li>
+                    <input type="text" placeholder="Search.." value="" id="search" onchange="openPage()" autocomplete="on">
+
+                    <script>
+                        function openPage() {
+                            var x = document.getElementById("search").value;
+                            if (x === "concept") {
+                                open("concepts.html");
+                            }
+
+                            if (x === "concepts") {
+                                open("concepts.html");
+                            }
+
+                            if (x === "problem") {
+                                open("practiceproblems.html");
+                            }
+
+                            if (x === "problems") {
+                                open("practiceproblems.html");
+                            }
+
+                            if (x === "practice problem") {
+                                open("practiceproblems.html");
+                            }
+
+                            if (x === "practice problems") {
+                                open("practiceproblems.html");
+                            }
+
+                            if (x === "quiz") {
+                                open("quizzes.html");
+                            }
+
+                            if (x === "quizzes") {
+                                open("quizzes.html");
+                            }
+
+                            if (x === "reference") {
+                                open("getstarted.html");
+                            }
+
+                            if (x === "references") {
+                                open("getstarted.html");
+                            }
+
+
+                        }
+                    </script>
+                </li>
             </ul>
         </nav>
 
